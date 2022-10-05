@@ -21,6 +21,11 @@ header{
     margin-bottom: 80px;
 }
 
+/*  ##########
+    HEADER
+    ##########
+*/
+
 @media (max-width: 1250px) {
     header{
         grid-template-columns: 1fr 900px 1fr;
