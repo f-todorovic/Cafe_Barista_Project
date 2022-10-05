@@ -33,6 +33,18 @@ header{
     position: relative;
 }
 
+@media (max-width: 1400px) {
+    header{
+        grid-template-columns: 1fr 1000px 1fr !important;
+    }
+}
+
+@media (max-width: 1050px) {
+    header{
+        grid-template-columns: 1fr 850px 1fr !important;
+    }
+}
+
 .header-name-of-cafe{
     grid-column: 2/span 1;
     justify-self: center;
@@ -45,6 +57,20 @@ nav{
     justify-content: space-between;
     grid-column: 2/span 1;
     grid-row: 2/span 1;
+}
+
+@media (max-width: 1200px){
+    nav{
+        margin-right: 64px;
+        margin-left: 64px;
+    }
+}
+
+@media (max-width: 1050px){
+    nav{
+        margin-right: 24px;
+        margin-left: 24px;
+    }
 }
 nav a:link,
 nav a:visited{
@@ -82,6 +108,16 @@ nav a:active{
     right: 0.2rem;
     max-width: 8vw;
     box-shadow: 0 0.6rem 0.8rem rgba(76,76,76,0.4);
+}
+
+@media (max-width: 1500px){
+    .logo--l{
+        max-width: 6vw;
+    }
+
+    .logo--r{
+        max-width: 6vw;
+    }
 }
 
 .background{
