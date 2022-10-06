@@ -13,6 +13,14 @@ body{
     background-color: rgba(76, 76, 76,0.25);
 }
 
+.grid{
+    display: grid;
+}
+
+.grid--3-cols{
+    grid-template-columns: 1fr minmax(0,120rem) 1fr;
+}
+
 header{
     display: grid;
     grid-template-columns: 1fr minmax(0,120rem) 1fr;
@@ -22,9 +30,18 @@ header{
     margin-bottom: 4.8rem;
     padding-bottom: 1.6rem;
     box-shadow: 0 0.2rem 1.2rem rgba(76,76,76,0.4);
-    background-size: contain;
-    background-position: center;
-    position: relative;
+}
+
+@media (max-width: 1400px) {
+    header{
+        grid-template-columns: 1fr 1000px 1fr !important;
+    }
+}
+
+@media (max-width: 1050px) {
+    header{
+        grid-template-columns: 1fr 900px 1fr !important;
+    }
 }
 
 nav{
@@ -34,12 +51,32 @@ nav{
     grid-row: 2/span 1;
 }
 
+@media (max-width: 1200px){
+    nav{
+        margin-right: 64px;
+        margin-left: 64px;
+    }
+}
+
+@media (max-width: 1050px){
+    nav{
+        margin-right: 24px;
+        margin-left: 24px;
+    }
+}
+
 .header-name-of-cafe{
     grid-column: 2/span 1;
     grid-row: 1/span 1;
     justify-self: center;
     margin-top: 1.6rem;
     font-size: 2rem;
+    width: 25%;
+    text-align: center;
+}
+
+@media (max-width: 1050px){
+
 }
 
 nav a:link,
@@ -153,6 +190,16 @@ article{
     right: 0.2rem;
     max-width: 8vw;
     box-shadow: 0 0.6rem 0.8rem rgba(76,76,76,0.4);
+}
+
+@media (max-width: 1500px){
+    .logo--l{
+        max-width: 6vw;
+    }
+
+    .logo--r{
+        max-width: 6vw;
+    }
 }
 
 .crew-header{
@@ -286,15 +333,14 @@ article{
     z-index: -10;
 }
 
-.crew::after{
+footer::before{
     content: "";
     width: 100vw;
-    padding-bottom: 0.1rem;
     background-color: rgba(76,76,76,0.35);
+    padding-bottom: 0.1rem;
+    box-shadow: 0 0.1rem 0.2rem rgba(76,76,76,0.4);
     position: absolute;
-    bottom: -173rem;
-    left: 0;
-    box-shadow: 0 1px 2px rgba(76,76,76,0.4);
+    transform: translate(0,-2.4rem);
 }
 
 .footer{
@@ -304,6 +350,8 @@ article{
     margin-left: 9.6rem;
     margin-right: 9.6rem;
     background-color: rgba(76,76,76,-0.1);
+    margin-bottom: 3.2rem;
+    color: white;
 }
 
 .footer h3{
